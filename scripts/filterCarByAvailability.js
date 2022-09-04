@@ -6,13 +6,12 @@ function filterCarByAvailability(cars) {
   const result = [];
 
   // Tulis code-mu disini
-  for (let i = 0; i < cars.length; i++) {
-    if (cars[i]['available']) {
+  for (let i = 0; i < cars.length -1; i++) {
+    if (cars[i]['available'] ) {
       result.push(cars[i]);
     }
   }
-
-
+  console.log(result);
 
   // Rubah code ini dengan array hasil filter berdasarkan availablity
   return result;
