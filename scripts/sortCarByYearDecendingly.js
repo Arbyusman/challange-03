@@ -28,6 +28,7 @@ function sortCarByYearDescendingly(cars) {
     return sort;
   }
   let hasilsorting = bubbleSort(cars);
+  console.log(hasilsorting);
 
   // Rubah code ini dengan array hasil sorting secara ascending
   return hasilsorting;
