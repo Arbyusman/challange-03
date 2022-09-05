@@ -7,7 +7,7 @@ function filterCarByAvailability(cars) {
 
   // Tulis code-mu disini
   for (let i = 0; i < cars.length -1; i++) {
-    if (cars[i]['available'] ) {
+    if (cars[i].available === true ) {
       result.push(cars[i]);
     }
   }
