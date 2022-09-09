@@ -4,31 +4,37 @@ function sortCarByYearAscendingly(cars) {
 
   // Clone array untuk menghindari side-effect
   // Apa itu side effect?
-  // const result = [...cars];
+  const result = [...cars];
 
   // Tulis code-mu disini
-   
-  function swap(arr, xp, yp) {
-    let temp = arr[xp];
-    arr[xp] = arr[yp];
-    arr[yp] = temp;
-  }
 
-  function bubbleSort(arr) {
-    let sort = arr;
-    let i, j;
-    for (i = 0; i < sort.length - 1; i++) {
-      for (j = 0; j < sort.length - i - 1; j++) {
-        if (sort[j].year > sort[j + 1].year) {
-          swap(sort, j, j + 1);
-        }
+  let i, j;
+  let len = result.length;
+
+  let isSwapped = false;
+
+  for (i = 0; i < len; i++) {
+    isSwapped = false;
+
+    for (j = 0; j < len - i - 1; j++) {
+      if (result[j].year > result[j + 1].year) {
+        let temp = result[j];
+        result[j] = result[j + 1];
+        result[j + 1] = temp;
+        isSwapped = true;
       }
     }
-    return sort;
-  }
-  let hasilsorting = bubbleSort(cars);
-  console.log(hasilsorting);
 
-  // Rubah code ini dengan array hasil sorting secara ascending
-  return hasilsorting;
+    // JIKA tidak ada dua elemen yang ditukar oleh loop, maka loop berhenti
+
+    if (!isSwapped) {
+      break;
+    }
+  }
+
+  // Print the array
+  console.log(result);
+
+  // calling the bubbleSort Function
+  return result;
 }
