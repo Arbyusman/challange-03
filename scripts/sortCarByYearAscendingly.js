@@ -10,7 +10,6 @@ function sortCarByYearAscendingly(cars) {
 
   let i, j;
   let len = result.length;
-
   let isSwapped = false;
 
   for (i = 0; i < len; i++) {
@@ -32,9 +31,9 @@ function sortCarByYearAscendingly(cars) {
     }
   }
 
-  // Print the array
+  // Print array
   console.log(result);
 
-  // calling the bubbleSort Function
+  // Rubah code ini dengan array hasil filter berdasarkan Ascendingly
   return result;
 }
